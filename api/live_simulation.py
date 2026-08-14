@@ -27,8 +27,10 @@ SUMO_HOME = os.environ.get(
     r"C:\Program Files (x86)\Eclipse\Sumo",
 )
 
-SUMO_BINARY = Path(SUMO_HOME) / "bin" / "sumo.exe"
-SUMO_GUI = Path(SUMO_HOME) / "bin" / "sumo-gui.exe"
+if os.name == "nt":
+    SUMO_BINARY = Path(SUMO_HOME) / "bin" / "sumo.exe"
+else:
+    SUMO_BINARY = Path("/usr/bin/sumo")
 
 SUMO_CONFIG = (
     PROJECT_ROOT
