@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configuration>
+    <input>
+        <net-file value="../../network/traffix.net.xml" />
+        <route-files value="traffix.rou.xml" />
+    </input>
+    <time>
+        <begin value="0" />
+        <end value="900" />
+    </time>
+    <processing>
+        <time-to-teleport value="-1" />
+    </processing>
+    <output>
+        <tripinfo-output value="tripinfo.xml" />
+    </output>
+</configuration>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="4.5" minGap="2.5" maxSpeed="13.9" guiShape="passenger" />
+    <vType id="bus" accel="1.2" decel="4.0" sigma="0.5" length="12" minGap="3" maxSpeed="11.1" guiShape="bus" />
+    <vType id="truck" accel="1.0" decel="3.5" sigma="0.5" length="10" minGap="3" maxSpeed="11.1" guiShape="truck" />
+    <vType id="bike" accel="3.0" decel="4.5" sigma="0.5" length="2" minGap="1" maxSpeed="13.9" guiShape="motorcycle" />
+    <route id="N1_S1" edges="N1_J1 J1_J3 J3_S1" />
+    <route id="S1_N1" edges="S1_J3 J3_J1 J1_N1" />
+    <route id="N2_S2" edges="N2_J2 J2_J4 J4_S2" />
+    <route id="S2_N2" edges="S2_J4 J4_J2 J2_N2" />
+    <route id="W1_E1" edges="W1_J1 J1_J2 J2_E1" />
+    <route id="E1_W1" edges="E1_J2 J2_J1 J1_W1" />
+    <route id="W2_E2" edges="W2_J3 J3_J4 J4_E2" />
+    <route id="E2_W2" edges="E2_J4 J4_J3 J3_W2" />
+    <flow id="north_south_1" type="car" route="N1_S1" begin="0" end="3600" vehsPerHour="1000" />
+    <flow id="south_north_1" type="car" route="S1_N1" begin="0" end="3600" vehsPerHour="700" />
+    <flow id="north_south_2" type="car" route="N2_S2" begin="0" end="3600" vehsPerHour="700" />
+    <flow id="south_north_2" type="car" route="S2_N2" begin="0" end="3600" vehsPerHour="300" />
+    <flow id="west_east_1" type="car" route="W1_E1" begin="0" end="3600" vehsPerHour="600" />
+    <flow id="east_west_1" type="car" route="E1_W1" begin="0" end="3600" vehsPerHour="350" />
+    <flow id="west_east_2" type="car" route="W2_E2" begin="0" end="3600" vehsPerHour="900" />
+    <flow id="east_west_2" type="car" route="E2_W2" begin="0" end="3600" vehsPerHour="500" />
+    <flow id="buses" type="bus" route="N2_S2" begin="0" end="3600" vehsPerHour="60" />
+    <flow id="trucks" type="truck" route="W1_E1" begin="0" end="3600" vehsPerHour="50" />
+    <flow id="motorcycles" type="bike" route="S1_N1" begin="0" end="3600" vehsPerHour="180" />
+</routes>
